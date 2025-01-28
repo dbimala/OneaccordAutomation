@@ -24,7 +24,7 @@ import { LOCATORS } from '../constants/locators';
   test('invalid email format', async ({ page }) => {
     await page.goto('https://admin.dev.oneaccord.cc/login');
     await page.fill('input[name="email"]', 'bimala');
-    await page.fill('input[name="password"]', 'Password@123');
+    await page.fill('input[name="password"]', 'Pass@123');
     await page.click('button:has-text("Login")');
     const errorMessage = await page.isVisible('text=Email address is not valid.');
   });
